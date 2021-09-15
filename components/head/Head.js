@@ -1,10 +1,10 @@
-import defaultHead from 'next/head'
+import head from 'next/head'
 
-export default function Head() { // override the dedault next head
+export default function() { // override the dedault next head
     return (
-        <defaultHead>
+        <head>
             <title>CKSJP</title>
             <link rel="icon" href="/favicon.ico" />
-        </defaultHead>
+        </head>
     )
 }

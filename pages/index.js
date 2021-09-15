@@ -1,10 +1,11 @@
 import Head from "../components/head/Head"
 import Layout from "../components/layout"
+
 import font from "../styles/font.module.css"
 
 export default function Home() {
     return (
-        <>
+        <> 
             <Head></Head>
             <Layout>
                 <p className={font.title}>日本の文化を研究する。</p>
