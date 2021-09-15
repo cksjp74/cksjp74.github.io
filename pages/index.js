@@ -3,7 +3,7 @@ import font from "../styles/font.module.css"
 
 export default function Home() {
     return (
-        <Layout>
+        <Layout title={"首頁"}>
             <p className={font.title}>日本の文化を研究する。</p>
             <p>
                 什麼，你說日文打錯了嗎？<br/>

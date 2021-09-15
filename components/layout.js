@@ -1,11 +1,11 @@
 import Head from 'next/head'
 import styles from '../styles/layout.module.css'
 
-export default function Layout({children}) {
+export default function Layout({title, children}) {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Create Next App</title>
+                <title>建中高三日研——{title}</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
