@@ -1,7 +1,7 @@
 export default function Mainfest() {
-    return (
-        <div class="mainfest">
+	return (
+		<div className="mainfest">
             
-        </div>
-    )
+		</div>
+	)
 }

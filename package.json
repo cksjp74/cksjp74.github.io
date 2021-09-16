@@ -1,22 +1,24 @@
 {
-  "name": "cksjp_next",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "npx next dev",
-    "build": "npx next build",
-    "start": "npx next start",
-    "lint": "npx next lint"
-  },
-  "dependencies": {
-    "next": "11.1.2",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "sass": "^1.41.0",
-    "tailwindcss": "^2.2.15"
-  },
-  "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
-  }
+	"name": "cksjp_next",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "npx next dev",
+		"build": "npx next lint && npx next build",
+		"buildforce": "npm run lintfix && npx next build",
+		"start": "npx next start",
+		"lint": "npx next lint",
+		"lintfix": "npx next lint --fix"
+	},
+	"dependencies": {
+		"next": "11.1.2",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"sass": "^1.41.0",
+		"tailwindcss": "^2.2.15"
+	},
+	"devDependencies": {
+		"eslint": "^7.32.0",
+		"eslint-config-next": "11.1.2"
+	}
 }
