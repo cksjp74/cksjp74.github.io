@@ -1,6 +1,6 @@
 import head from 'next/head'
 
-export default function() { // override the dedault next head
+export default function Head() { // override the dedault next head
 	return (
 		<head>
 			<title>CKSJP</title>
