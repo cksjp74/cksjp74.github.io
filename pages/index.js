@@ -1,7 +1,7 @@
 import Head from "../components/head/Head"
 import Layout from "../components/layout"
 
-import font from "../styles/font.module.css"
+import font from "../styles/font.module.sass"
 
 export default function Home() {
     return (

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Mainfest from "../components/mainfest"
-import styles from '../styles/layout.module.css'
+import styles from '../styles/layout.module.sass'
 
 export default function Layout({title, children}) {
     return (
