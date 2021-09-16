@@ -1,6 +1,6 @@
 import Head from "../components/head"
 import Layout from "../components/layout"
-import Manifest from "../components/manifest";
+import Mainfest from "../components/mainfest";
 
 import font from "../styles/font.module.sass"
 
@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<> 
 			<Head title={"首頁"}/>
-			<Manifest/>
+			<Mainfest/>
 			<Layout>
 				<p className={font.title}>日本の文化を研究する。</p>
 				<p>
