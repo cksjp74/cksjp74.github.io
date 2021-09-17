@@ -5,19 +5,16 @@ module.exports = {
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
 	},
+	// ref: https://github.com/webpack-contrib/css-loader#localidentname
 	webpack(config) {
 		config.module.rules[3].oneOf.forEach((moduleLoader) => {
 			Array.isArray(moduleLoader.use) &&
 			moduleLoader.use.forEach((l) => {
 				if (/(?<!post)css-loader/.test(l.loader)) {
 					const { getLocalIdent, ...others } = l.options.modules
-					l.options = {
-						...l.options,
-						modules: {
-							...others,
-							localIdentName: "[local]",
-							// ref: https://github.com/webpack-contrib/css-loader#localidentname
-						},
+					l.options.modules = {
+						...others,
+						localIdentName: "[local]",
 					}
 				}
 			})

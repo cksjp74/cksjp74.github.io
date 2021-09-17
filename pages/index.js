@@ -9,8 +9,8 @@ export default function Home() {
 		<>
 			<Head title={"首頁"}/>
 			<Layout>
-				<div className={layout.mainfest}>
-					{/* TODO: add some text */}
+				<div className={layout.manifest}>
+					<h1>Oh. So. Japan.</h1>
 				</div>
 				<p className={font.title}>日本の文化を研究する。</p>
 				<p>
