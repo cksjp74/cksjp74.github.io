@@ -1,14 +1,14 @@
-import Main from './layout/main'
+import Header from "../components/general/header"
 
 import styles from '../styles/layout.module.sass'
 
-export default function Layout() {
+export default function Layout({children}) {
 	return (
 		<>
 			<div className={styles.container}>
-				<header className={styles.header}>建中高三日研</header>
+				<Header/>
 
-				<Main />
+				<main>{children}</main>
 			</div>
 		</>
 	)

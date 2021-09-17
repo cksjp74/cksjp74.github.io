@@ -4,7 +4,9 @@ export default function Mainfest() {
 	return (
 		<>
 			<div className={layout.mainfest}>
-				//TODO add some text 
+				<div className={layout.filter}>
+					<h1>Oh. So. Japan.</h1>
+				</div>
 			</div>
 		</>
 	)
