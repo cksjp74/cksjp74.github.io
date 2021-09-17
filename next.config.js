@@ -15,7 +15,8 @@ module.exports = {
 						...l.options,
 						modules: {
 							...others,
-							localIdentName: "[hash:base64:6]",
+							localIdentName: "[local]",
+							// ref: https://github.com/webpack-contrib/css-loader#localidentname
 						},
 					}
 				}
