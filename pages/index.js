@@ -1,16 +1,17 @@
 import Head from "../components/general/head"
 import Layout from "../components/layout"
-import Mainfest from "../components/layout/main/mainfest"
 
+import layout from "../styles/layout.module.sass"
 import font from "../styles/font.module.sass"
 
 export default function Home() {
 	return (
 		<>
 			<Head title={"首頁"}/>
-			{/* <Body style={{'margin': '0 auto'}}> */}
 			<Layout>
-				<Mainfest />
+				<div className={layout.mainfest}>
+					{/* TODO: add some text */}
+				</div>
 				<p className={font.title}>日本の文化を研究する。</p>
 				<p>
 					什麼，你說日文打錯了嗎？<br/>
@@ -19,7 +20,6 @@ export default function Home() {
 					<em className={font.cite}>未知而博大精深。</em>
 				</p>
 			</Layout>
-			{/* </Body> */}
 		</>
 	)
 }
