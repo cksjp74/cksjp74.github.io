@@ -1,13 +1,25 @@
 @import "variables"
 
+.container
+	position: absolute
+	text-align: center
+	background-color: $color-white
+	width: 100%
+	min-height: 100vh
+	padding-top: $header-height
+	padding-bottom: 8vh
+	color: $color-black
+
 .header
 	position: fixed
 	top: 0
 	left: 0
+	z-index: 1
 	display: flex
 	height: $header-height
 	width: 100vw
 	flex-direction: row
+	text-align: center
 	align-items: center
 	justify-content: center
 	background-color: $color-dark
@@ -18,17 +30,6 @@
 		font-size: calc(10px + 2vmin)
 		font-family: 'Kaisei Opti', serif
 		flex-grow: 1
-
-.container
-	position: absolute
-	text-align: center
-	background-color: $color-white
-	width: 100%
-	min-height: 100vh
-	padding-top: $header-height
-	padding-bottom: 8vh
-	color: $color-black
-	font-size: 24px
 
 .sidebar
 	height: 100%
@@ -43,7 +44,6 @@
 	background-color: $color-indigo
 	color: $color-white
 	white-space: nowrap
-	text-align: left
 	a
 		margin-left: 2rem
 		margin-bottom: 1em
@@ -63,13 +63,13 @@
 
 .openNav
 	position: relative
+	display: block
 	height: $header-height
 	width: $header-height
+	line-height: $header-height
+	color: $color-white
 	cursor: pointer
-	background: none
-	color: white
 	font-size: 100%
-	border: none
 	&::after
 		content: '☰'
 
@@ -77,6 +77,6 @@
 	position: absolute
 	right: 25px
 	top: 0
-	font-size: 3rem
+	font-size: 2em
 	&::after
 		content: '×'
