@@ -36,7 +36,7 @@ export default class Header extends React.Component {
 				<h1>建中高三日研</h1>
 			</header>
 			<div className={styles.sidebar}>
-				<a className={styles.closeNav} onClick={this.toggle} href='javascript:void(0)'/>
+				<a className={styles.closeNav} onClick={this.toggle}/>
 				<Link href='/'>關於我們</Link>
 				<Link href='/lessons'>社團課程</Link>
 			</div>
