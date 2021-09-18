@@ -9,7 +9,8 @@ export default class Header extends React.Component {
 		this.state = {opened: false}
 	}
 
-	toggle = () => {
+	toggle = (e) => {
+		e.preventDefault();
 		this.setState(prevState => {
 			let sidebar = $('.' + styles.sidebar)
 			let curtain = $('.' + styles.curtain)
