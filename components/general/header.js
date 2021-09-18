@@ -1,8 +1,9 @@
 import styles from "../../styles/layout.module.sass"
 import $ from 'jquery'
-import {Component} from "react"
+import React from 'react'
+import Link from 'next/link'
 
-export default class Header extends Component {
+export default class Header extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = {opened: false}
@@ -35,9 +36,9 @@ export default class Header extends Component {
 				<h1>建中高三日研</h1>
 			</header>
 			<div className={styles.sidebar}>
-				<a className={styles.closeNav} onClick={this.toggle}/>
-				<a href='/'>關於我們</a>
-				<a href='/lessons'>社團課程</a>
+				<a className={styles.closeNav} onClick={this.toggle} href='javascript:void(0)'/>
+				<Link href='/'>關於我們</Link>
+				<Link href='/lessons'>社團課程</Link>
 			</div>
 			<div className={styles.curtain}/>
 		</>)
