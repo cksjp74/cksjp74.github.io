@@ -1,4 +1,4 @@
-import Header from "../components/general/header"
+import {Header, Sidebar} from "./general/header"
 
 import styles from '../styles/layout.module.sass'
 
@@ -7,8 +7,8 @@ export default function Layout({children}) {
 		<>
 			<div className={styles.container}>
 				<Header/>
-
-				<main>{children}</main>
+				<Sidebar/>
+				<main id="main">{children}</main>
 			</div>
 		</>
 	)

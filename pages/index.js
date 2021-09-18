@@ -1,7 +1,7 @@
 import Head from "../components/general/head"
 import Layout from "../components/layout"
 
-import layout from "../styles/layout.module.sass"
+import styles from "../styles/page/index.module.sass"
 import font from "../styles/font.module.sass"
 
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
 		<>
 			<Head title={"首頁"}/>
 			<Layout>
-				<div className={layout.manifest}>
+				<div className={styles.manifest}>
 					<h1>Oh. So. Japan.</h1>
 				</div>
 				<p className={font.title}>日本の文化を研究する。</p>
