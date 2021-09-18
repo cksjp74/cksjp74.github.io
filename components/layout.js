@@ -5,9 +5,9 @@ import styles from '../styles/layout.module.sass'
 export default function Layout({children}) {
 	return (
 		<>
+			<Header/>
+			<Sidebar/>
 			<div className={styles.container}>
-				<Header/>
-				<Sidebar/>
 				<main id="main">{children}</main>
 			</div>
 		</>

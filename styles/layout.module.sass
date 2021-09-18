@@ -12,12 +12,18 @@
 	justify-content: center
 	background-color: $color-dark
 	transition: left 0.3s
+	z-index: 1
+	text-align: center
+	font-size: 24px
 
 	h1
 		color: $color-white
 		font-size: calc(10px + 2vmin)
 		font-family: 'Kaisei Opti', serif
 		flex-grow: 1
+	
+	&.hide
+		left: -100vw
 
 .container
 	position: absolute
@@ -29,6 +35,12 @@
 	padding-bottom: 8vh
 	color: $color-black
 	font-size: 24px
+
+	& > #main
+		display: block
+		position: absolute
+		width: 100%
+		min-height: 200vh
 
 .sidebar
 	height: 100%
@@ -44,6 +56,8 @@
 	color: $color-white
 	white-space: nowrap
 	text-align: left
+	font-size: 24px
+
 	a
 		margin-left: 2rem
 		margin-bottom: 1em
@@ -78,5 +92,6 @@
 	right: 25px
 	top: 0
 	font-size: 3rem
+	cursor: pointer
 	&::after
 		content: '×'
