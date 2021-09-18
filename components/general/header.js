@@ -8,7 +8,8 @@ export default class Header extends Component {
 		this.state = {opened: false}
 	}
 
-	toggle = () => {
+	toggle = (e) => {
+		e.preventDefault();
 		this.setState(prevState => {
 			let sidebar = $('.' + styles.sidebar)
 			let curtain = $('.' + styles.curtain)
@@ -34,7 +35,7 @@ export default class Header extends Component {
 				<h1>建中高三日研</h1>
 			</header>
 			<div className={styles.sidebar}>
-				<a className={styles.closeNav} onClick={this.toggle} href='javascript:void(0)'/>
+				<a className={styles.closeNav} onClick={this.toggle}/>
 				<a href='/'>關於我們</a>
 				<a href='/lessons'>社團課程</a>
 			</div>
