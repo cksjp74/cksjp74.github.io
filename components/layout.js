@@ -7,7 +7,11 @@ export default function Layout({children}) {
 		<>
 			<div className={styles.container}>
 				<Header/>
-				<Sidebar/>
+				<Sidebar>
+					{{
+						opened: false
+					}}
+				</Sidebar>
 				<main id="main">{children}</main>
 			</div>
 		</>

@@ -21,7 +21,7 @@ function toggleNav() {
 export function Header() {
 	return (
 		<header className={styles.header}>
-			<div style={{width: 0}}><button className={styles.openNav} onClick={""}/></div>
+			<div style={{width: 0}}><button className={styles.openNav}/></div>
 			<h1>建中高三日研</h1>
 		</header>
 	)
@@ -64,25 +64,29 @@ export class Sidebar extends React.Component {
 		}
 	}
 
-	toggle() {
-		let sidebar = $(this);
-		let curtain = $('.' + styles.curtain)
-		if(this.state.opened) {
-			sidebar.css('width', '0')
-			curtain.css('visibility', 'hidden')
-			curtain.css('opacity', '0')
-		}else {
-			sidebar.css('width', '250px')
-			curtain.css('visibility', 'visible')
-			curtain.css('opacity', '.5')
-		}
-		this.state.opened = !this.state.opened;
+	toggle = () => {
+		this.setState(prevState => {
+			let sidebar = $('.' + styles.sidebar);
+			let curtain = $('.' + styles.curtain);
+			if(prevState.opened) {
+				sidebar.css('width', '0')
+				curtain.css('visibility', 'hidden')
+				curtain.css('opacity', '0')
+			}else {
+				sidebar.css('width', '250px')
+				curtain.css('visibility', 'visible')
+				curtain.css('opacity', '.5')
+			}
+			return {
+				opened: !prevState.opened
+			}
+		})
 	}
 
 	render() {
 		return (
 			<>
-				<div id="sidebar" className={styles.sidebar} data-opened="false">
+				<div id="sidebar" className={styles.sidebar}>
 					<a className={styles.closeNav} onClick={this.toggle} href='javascript:void(0)'/>
 					<a href='/'>關於我們</a>
 					<a href='/lessons'>社團課程</a>
