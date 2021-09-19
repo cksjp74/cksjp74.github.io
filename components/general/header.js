@@ -35,11 +35,11 @@ export default class Header extends React.Component {
 
 	render() {
 		return (<>
-			<header className={styles.header + ' ' + (this.state.hideHeader ? styles.hide : '')}>
+			<header className={`${styles.header} ${this.state.hideHeader ? styles.hide : ''}`}>
 				<div style={{width: 0}}>
 					<a className={styles.openNav} onClick={this.toggle}/>
 				</div>
-				<h1>建中高三日研</h1>
+				<Link href='/'><h1>建中高三日研</h1></Link>
 			</header>
 			<div className={styles.sidebar}>
 				<a className={styles.closeNav} onClick={this.toggle}/>

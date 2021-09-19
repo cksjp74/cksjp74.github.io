@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Manifest from "../components/general/manifest"
 
 import font from "../styles/font.module.sass"
-import layout from "../styles/layout.module.sass"
+import styles from "../styles/page/index.module.sass"
 
 export default function Home() {
 	return (<>
@@ -12,10 +12,10 @@ export default function Home() {
 			isHome
 			manifest = {<Manifest/>}
 			children = {<>
-				<p className={`${font.title} ${layout.superTitle}`}>日本の文化を研究する。</p>
+				<p className={`${font.title} ${styles.superTitle}`}>日本の文化を研究する。</p>
 				<p>
 					什麼，你說日文打錯了嗎？<br/>
-					好啦，我是真的不很會日文。<br/>
+					好啦，我就只是個日文很爛的網管。<br/>
 					但這正是日本文化帶給我的魅力：<br/>
 					<em className={font.cite}>未知而博大精深。</em>
 				</p>
