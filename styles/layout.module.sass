@@ -13,18 +13,22 @@
 	align-items: center
 	justify-content: center
 	background-color: $color-dark
-	transition: left 0.3s
-	z-index: 1
-	text-align: center
+	transition: width $transition-time, border-radius $transition-time
 
 	h1
 		color: $color-white
 		font-size: calc(10px + 2vmin)
 		font-family: 'Kaisei Opti', serif
 		flex-grow: 1
+		transition: visibility $transition-time, opacity $transition-time
 	
 	&.hide
-		left: -100vw
+		width: 8vh
+		border-radius: 0 0 20px 0
+		justify-content: left
+		& > h1
+			visibility: hidden
+			opacity: 0
 
 .container
 	position: absolute
@@ -51,7 +55,8 @@
 	overflow-x: hidden
 	padding-top: 4rem
 	transition: 0.5s
-	background-color: $color-indigo
+	background-color: adjust-color($color-indigo, $alpha: -0.2)
+	backdrop-filter: blur(10px)
 	color: $color-white
 	white-space: nowrap
 	text-align: left
@@ -80,7 +85,6 @@
 	width: $header-height
 	line-height: $header-height
 	color: $color-white
-	cursor: pointer
 	font-size: 100%
 	&::after
 		content: '☰'
@@ -90,6 +94,5 @@
 	right: 25px
 	top: 0
 	font-size: 3rem
-	cursor: pointer
 	&::after
 		content: '×'
