@@ -6,20 +6,36 @@ import Link from 'next/link'
 export default class Header extends React.Component {
 	constructor(props) {
 		super(props)
-		this.state = {opened: false}
+		this.state = {opened: false, hideHeader: this.props.isHome}
+	}
+
+	componentDidMount() {window.addEventListener('scroll', this.onScroll, false)}
+
+	componentWillUnmount() {window.removeEventListener('scroll', this.onScroll, false)}
+
+	onScroll = () => {
+		if (this.props.isHome) this.setState(prevState => {
+			return {
+				...prevState,
+				hideHeader: (window.scrollY < window.innerHeight)
+			}
+		})
 	}
 
 	toggle = (e) => {
 		e.preventDefault()
 		this.setState(prevState => {
 			$('.' + styles.sidebar).toggleClass(styles.opened, !prevState.opened)
-			return {opened: !prevState.opened}
+			return {
+				...prevState,
+				opened: !prevState.opened
+			}
 		})
 	}
 
 	render() {
 		return (<>
-			<header className={styles.header}>
+			<header className={styles.header + ' ' + (this.state.hideHeader ? styles.hide : '')}>
 				<div style={{width: 0}}>
 					<a className={styles.openNav} onClick={this.toggle}/>
 				</div>

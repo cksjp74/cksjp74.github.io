@@ -8,6 +8,7 @@ export default function Home() {
 	return (<>
 		<Head title={"首頁"}/>
 		<Layout
+			isHome
 			manifest = {<Manifest/>}
 			children = {<>
 				<p className={font.title}>日本の文化を研究する。</p>
