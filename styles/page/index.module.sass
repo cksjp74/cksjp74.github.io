@@ -1,24 +1,25 @@
 @import "../variables"
 
 .manifest
-  width: 100%
-  height: 100vh
-  background: linear-gradient($color-black, #00000000)
-  padding: 8vh
-  text-align: center
-  &::before
-    content: ""
-    position: absolute
-    height: 100%
-    top: 0
-    left: 0
-    right: 0
-    z-index: -1
-    background: url(/img/manifest.jpg) no-repeat center center
-    background-size: cover
-    filter: blur(2px)
+	width: 100%
+	height: 100vh
+	background: linear-gradient($color-black, #00000000)
+	padding: 8vh
+	text-align: center
 
-  h1
-    color: $color-white
-    font-size: calc(10px + 4vmin)
-    font-family: 'Kaisei Opti', serif
+	&::before
+		content: ""
+		position: absolute
+		height: 100%
+		top: 0
+		left: 0
+		right: 0
+		z-index: -1
+		background: url(/img/manifest.jpg) no-repeat center center
+		background-size: cover
+		filter: blur(2px)
+
+	h1
+		color: $color-white
+		font-size: calc(10px + 4vmin)
+		font-family: 'Kaisei Opti', serif

@@ -1,23 +1,27 @@
 .lessonsWrapper
-  display: flex
-  align-items: center
-  justify-content: center
-  flex-wrap: wrap
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-wrap: wrap
 
 .lessonBlock
-  width: 40%
-  min-width: 200px
-  min-height: 100px
-  background-color: white
-  border-radius: 1em
-  margin: .5em
-  padding: .5em
-  &.lessonUnavailable
-    filter: brightness(.6) blur(2px)
-  & > p
-    margin: .3rem
-  .lessonTitle
-    font-size: 1em
-  .lessonContent
-    font-size: .7em
-    color: gray
+	width: 40%
+	min-width: 200px
+	min-height: 100px
+	background-color: white
+	border-radius: 1em
+	margin: .5em
+	padding: .5em
+
+	&.lessonUnavailable
+		filter: brightness(.6) blur(2px)
+
+	& > p
+		margin: .3rem
+
+	.lessonTitle
+		font-size: 1em
+
+	.lessonContent
+		font-size: .7em
+		color: gray
