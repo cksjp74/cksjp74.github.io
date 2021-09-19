@@ -18,7 +18,8 @@ $transition-time: .5s
 		@for $j from $from through $stroke
 			$shadow: append($shadow, #{ $i * 1px } #{ $j * 1px } 0 $color, comma)
 	@return $shadow
-/// Stroke font-character
+
+// Stroke font-character
 /// @param  {Integer} $stroke - Stroke width
 /// @param  {Color}   $color  - Stroke color
 /// @return {Style}           - text-shadow

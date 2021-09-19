@@ -12,7 +12,8 @@
 	text-align: center
 	align-items: center
 	justify-content: center
-	background-color: $color-dark
+	background-color: adjust-color($color-dark, $alpha: -.05)
+	backdrop-filter: blur(10px)
 	transition: width $transition-time, border-radius $transition-time
 
 	h1
@@ -64,6 +65,12 @@
 	white-space: nowrap
 	text-align: left
 
+	&.opened
+		width: 250px
+		& + .curtain
+			visibility: visible
+			opacity: .5
+
 	& > a
 		margin-left: 1.4rem
 		margin-bottom: 1em
@@ -71,6 +78,8 @@
 		&:not(.closeNav)
 			&:hover
 				filter: brightness(1)
+				&::after
+					width: 50%
 			&::after
 				content: ''
 				width: 0
@@ -82,14 +91,6 @@
 				position: absolute
 				background: $color-white
 				transition: width $transition-time
-			&:hover:after
-				width: 50%
-
-	&.opened
-		width: 250px
-		& + .curtain
-			visibility: visible
-			opacity: .5
 
 .curtain
 	display: block

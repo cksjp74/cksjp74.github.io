@@ -1,6 +1,5 @@
 import Head from "../components/general/head"
 import Layout from "../components/layout"
-import Manifest from "../components/general/manifest"
 
 import font from "../styles/font.module.sass"
 import styles from "../styles/page/index.module.sass"
@@ -22,4 +21,13 @@ export default function Home() {
 			</>}
 		/>
 	</>)
+}
+
+function Manifest() {
+	return (
+		<div className={styles.manifest}>
+			<h4>日本文化研究社</h4>
+			<h1>すべてが日本。</h1>
+		</div>
+	)
 }

@@ -4,7 +4,7 @@ import head from 'next/head'
 export default function Head({title}) {
 	return (
 		<head>
-			<title>CKSJP —— {title}</title>
+			<title>CKSJP — {title}</title>
 			<link rel="icon" href="/favicon.ico" />
 		</head>
 	)

@@ -23,7 +23,7 @@ export default function Lessons () {
 
 function Lesson({title, content, unavailable}) {
 	return (
-		<div className={styles.block + ' ' + (unavailable ? styles.unavailable : '')}>
+		<div className={`${styles.block} ${unavailable ? styles.unavailable : ''}`}>
 			<p className={styles.title}>{title}</p>
 			<p className={styles.content}>{content}</p>
 		</div>
