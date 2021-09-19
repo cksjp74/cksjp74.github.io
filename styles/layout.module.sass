@@ -62,10 +62,19 @@
 	white-space: nowrap
 	text-align: left
 
-	a
-		margin-left: 2rem
+	& > a
+		margin-left: 1.4rem
 		margin-bottom: 1em
 		display: block
+		&:not(.closeNav)
+			border-bottom: 1px solid
+			padding-bottom: 3px
+			width: 60%
+			border-bottom-color: transparent
+			transition: border-bottom-color 0.3s
+			&:hover
+				border-bottom-color: initial
+		
 
 	&.opened
 		width: 250px
