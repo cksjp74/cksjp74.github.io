@@ -9,7 +9,7 @@ export default function Lessons () {
 		<Layout>
 			<h1>社團課程</h1>
 			<hr/>
-			<div className={styles.lessonsWrapper}>
+			<div className={styles.wrapper}>
 				<Lesson title='日本電子音樂' content='Vocaloid的歷史與發展'/>
 				<Lesson unavailable title='二戰日本' content=''/>
 				<Lesson unavailable title='ACG文化' content=''/>
@@ -23,9 +23,9 @@ export default function Lessons () {
 
 function Lesson({title, content, unavailable}) {
 	return (
-		<div className={styles.lessonBlock + ' ' + (unavailable ? styles.lessonUnavailable : '')}>
-			<p className={styles.lessonTitle}>{title}</p>
-			<p className={styles.lessonContent}>{content}</p>
+		<div className={styles.block + ' ' + (unavailable ? styles.unavailable : '')}>
+			<p className={styles.title}>{title}</p>
+			<p className={styles.content}>{content}</p>
 		</div>
 	)
 }

@@ -14,7 +14,7 @@ module.exports = {
 					const { getLocalIdent, ...others } = l.options.modules
 					l.options.modules = {
 						...others,
-						localIdentName: "[local]",
+						localIdentName: "[local]_[hash:base64:6]",
 					}
 				}
 			})

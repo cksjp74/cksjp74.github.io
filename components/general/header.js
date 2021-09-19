@@ -12,7 +12,7 @@ export default class Header extends React.Component {
 	toggle = (e) => {
 		e.preventDefault()
 		this.setState(prevState => {
-			$('.' + styles.sidebar).toggleClass(styles.opened, prevState.opened)
+			$('.' + styles.sidebar).toggleClass(styles.opened, !prevState.opened)
 			return {opened: !prevState.opened}
 		})
 	}
