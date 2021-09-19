@@ -1,5 +1,11 @@
 @import "../variables"
 
+@keyframes float_title
+	0%, 100%
+		transform: translateY(55%)
+	50%
+		transform: translateY(45%)
+
 @mixin manifest_title($size)
 	color: $color-white
 	font-size: $size
@@ -7,8 +13,8 @@
 	position: relative
 	top: calc(50% - 12vh)
 	margin: 0
-	transform: translateY(calc(50%))
 	text-shadow: stroke(3, $color-black), 0 0 10px $color-black
+	animation: float_title infinite 6s
 
 .manifest
 	width: 100%
