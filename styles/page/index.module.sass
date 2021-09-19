@@ -3,10 +3,20 @@
 .manifest
   width: 100%
   height: 100vh
-  background: url(/img/manifest.jpg) no-repeat center center, linear-gradient(#3d2c23, #00000000)
-  background-size: cover
-  background-blend-mode: overlay
+  background: linear-gradient($color-black, #00000000)
   padding: 8vh
+  text-align: center
+  &::before
+    content: ""
+    position: absolute
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+    z-index: -1
+    background: url(/img/manifest.jpg) no-repeat center center
+    background-size: cover
+    filter: blur(2px)
 
   h1
     color: $color-white
