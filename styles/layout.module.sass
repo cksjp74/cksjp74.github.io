@@ -37,10 +37,9 @@
 	background-color: $color-white
 	width: 100%
 	min-height: 200vh
-	// padding-top: $header-height
 	color: $color-black
 
-	& > #main
+	& > main
 		display: block
 		position: relative
 		padding: 8vh
@@ -67,6 +66,12 @@
 		margin-left: 2rem
 		margin-bottom: 1em
 		display: block
+
+	&.opened
+		width: 250px
+		& + .curtain
+			visibility: visible
+			opacity: .5
 
 .curtain
 	display: block
