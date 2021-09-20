@@ -5,7 +5,7 @@ import styles from '../styles/page/lessons.module.sass'
 
 export default function Lessons () {
 	return (<>
-		<Head title={"社團課程"}/>
+		<Head title={'社團課程'}/>
 		<Layout>
 			<h1>社團課程</h1>
 			<hr/>

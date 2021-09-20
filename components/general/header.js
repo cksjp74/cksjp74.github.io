@@ -1,7 +1,8 @@
-import styles from "../../styles/layout.module.sass"
 import $ from 'jquery'
 import React from 'react'
 import Link from 'next/link'
+
+import styles from '../../styles/layout.module.sass'
 
 export default class Header extends React.Component {
 	constructor(props) {
@@ -39,7 +40,7 @@ export default class Header extends React.Component {
 				<div className={styles.openNav}>
 					<a onClick={this.toggle}/>
 				</div>
-				<Link href='/'><h1>建中高三日研</h1></Link>
+				<Link href='/'><a><h1>建中高三日研</h1></a></Link>
 			</header>
 			<div className={styles.sidebar}>
 				<a className={styles.closeNav} onClick={this.toggle}/>

@@ -1,12 +1,12 @@
-import Head from "../components/general/head"
-import Layout from "../components/layout"
+import Head from '../components/general/head'
+import Layout from '../components/layout'
 
-import font from "../styles/font.module.sass"
-import styles from "../styles/page/index.module.sass"
+import font from '../styles/font.module.sass'
+import styles from '../styles/page/index.module.sass'
 
 export default function Home() {
 	return (<>
-		<Head title={"首頁"}/>
+		<Head title={'首頁'}/>
 		<Layout isHome manifest = {<Manifest/>}>
 			<p className={`${font.superTitle}`}>日本の文化を研究する。</p>
 			<p>

@@ -1,6 +1,15 @@
 {
-	"extends": "next/core-web-vitals",
+	"extends": [
+		"next/core-web-vitals",
+		"eslint:recommended"
+	],
 	"rules": {
-		"indent": ["error", "tab"]
+		"no-console": "error",
+		"camelcase": "error",
+		"quotes": ["warn", "single"],
+		"jsx-quotes": ["error", "prefer-single"],
+		"indent": ["error", "tab", {
+			"ignoredNodes": ["TemplateLiteral"]
+		}]
 	}
 }

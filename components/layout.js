@@ -1,4 +1,4 @@
-import Header from "./general/header"
+import Header from './general/header'
 
 import styles from '../styles/layout.module.sass'
 
@@ -7,7 +7,7 @@ export default function Layout({manifest, children, isHome = false}) {
 		<Header isHome={isHome}/>
 		{manifest}
 		<div className={styles.container}>
-			<main id="main">{children}</main>
+			<main id='main'>{children}</main>
 		</div>
 	</>)
 }
