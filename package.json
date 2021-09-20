@@ -6,6 +6,7 @@
 		"dev": "npx next dev",
 		"build": "npx next lint && npx next build",
 		"buildforce": "npm run lintfix && npx next build",
+		"export": "npx next export",
 		"start": "npx next start",
 		"lint": "npx next lint",
 		"lintfix": "npx next lint --fix"
