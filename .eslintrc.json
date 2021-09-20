@@ -10,6 +10,7 @@
 		"jsx-quotes": ["error", "prefer-single"],
 		"indent": ["error", "tab", {
 			"ignoredNodes": ["TemplateLiteral"]
-		}]
+		}],
+		"@next/next/no-document-import-in-page": "off"
 	}
 }
