@@ -1,4 +1,4 @@
-import Head from '../components/general/head'
+import Head from '../components/head'
 import Layout from '../components/layout'
 
 import font from '../styles/font.module.sass'
@@ -8,8 +8,8 @@ export default function Home() {
 	return (<>
 		<Head title={'首頁'}/>
 		<Layout isHome manifest = {<Manifest/>}>
-			<p className={`${font.superTitle}`}>日本の文化を研究する。</p>
 			<p>
+				<p className={`${font.superTitle}`}>日本の文化を研究する。</p>
 				什麼，你說日文打錯了嗎？<br/>
 				好啦，我就只是個日文很爛的網管。<br/>
 				但這正是日本文化帶給我的魅力：<br/>

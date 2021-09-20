@@ -1,4 +1,4 @@
-import Head from '../components/general/head'
+import Head from '../components/head'
 import Layout from '../components/layout'
 
 import styles from '../styles/page/lessons.module.sass'

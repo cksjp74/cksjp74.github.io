@@ -5,13 +5,13 @@
 	text-align: center
 	background-color: $color-white
 	width: 100%
-	min-height: 200vh
+	min-height: 100%
 	color: $color-black
 
 	& > main
 		display: block
 		position: relative
-		padding: (2 * $header-height) 8vh 8vh
+		padding: $header-height
 		width: 100%
 
 	p
@@ -33,13 +33,12 @@
 	backdrop-filter: blur(10px)
 	transition: width $transition-time, border-radius $transition-time*2
 
-	h1
+	.title
 		color: $color-white
 		font-size: calc(10px + 2vmin)
 		font-family: 'Kaisei Opti', serif
 		white-space: nowrap
 		flex-grow: 1
-		cursor: pointer
 		transition: visibility $transition-time, opacity $transition-time
 
 	&.hide
@@ -47,7 +46,7 @@
 		border-radius: 0 0 15px 0
 		justify-content: left
 
-		& > h1
+		.title
 			visibility: hidden
 			opacity: 0
 
@@ -110,6 +109,8 @@
 
 .openNav
 	width: 0
+	position: absolute
+	left: 0
 	& > a
 		position: relative
 		display: block

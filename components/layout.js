@@ -1,4 +1,4 @@
-import Header from './general/header'
+import Header from './header'
 
 import styles from '../styles/layout.module.sass'
 
