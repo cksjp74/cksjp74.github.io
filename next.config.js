@@ -1,6 +1,7 @@
 const path = require('path')
 
 module.exports = {
+	assetPrefix: './',
 	reactStrictMode: true,
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')],
@@ -11,10 +12,10 @@ module.exports = {
 			Array.isArray(moduleLoader.use) &&
 			moduleLoader.use.forEach((l) => {
 				if (/(?<!post)css-loader/.test(l.loader)) {
-					const { getLocalIdent, ...others } = l.options.modules
+					const others = l.options.modules
 					l.options.modules = {
 						...others,
-						localIdentName: "[local]_[hash:base64:6]",
+						localIdentName: '[local]_[hash:base64:6]',
 					}
 				}
 			})
