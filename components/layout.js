@@ -2,7 +2,7 @@ import Header from './header'
 
 import styles from '../styles/layout.module.sass'
 
-export default function Layout({manifest, children, isHome = false}) {
+export default function Layout({manifest, children, isHome}) {
 	return (<>
 		<Header isHome={isHome}/>
 		{manifest}
