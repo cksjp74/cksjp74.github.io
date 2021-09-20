@@ -1,5 +1,22 @@
 @import "variables"
 
+.container
+	position: absolute
+	text-align: center
+	background-color: $color-white
+	width: 100%
+	min-height: 200vh
+	color: $color-black
+
+	& > main
+		display: block
+		position: relative
+		padding: (2 * $header-height) 8vh 8vh
+		width: 100%
+
+	p
+		line-height: 1.5em
+
 .header
 	position: fixed
 	top: 0
@@ -14,7 +31,7 @@
 	justify-content: center
 	background-color: adjust-color($color-dark, $alpha: -.05)
 	backdrop-filter: blur(10px)
-	transition: width $transition-time, border-radius $transition-time
+	transition: width $transition-time, border-radius $transition-time*2
 
 	h1
 		color: $color-white
@@ -34,23 +51,6 @@
 			visibility: hidden
 			opacity: 0
 
-.container
-	position: absolute
-	text-align: center
-	background-color: $color-white
-	width: 100%
-	min-height: 200vh
-	color: $color-black
-
-	& > main
-		display: block
-		position: relative
-		padding: (2 * $header-height) 8vh 8vh
-		width: 100%
-
-	p
-		line-height: 1.5em
-
 .sidebar
 	height: 100%
 	width: 0
@@ -61,7 +61,7 @@
 	overflow: hidden
 	padding-top: 4rem
 	transition: $transition-time
-	background-color: adjust-color($color-indigo, $alpha: -0.3)
+	background-color: adjust-color($color-indigo, $alpha: -.3)
 	backdrop-filter: blur(10px)
 	box-shadow: 0 0 15px $color-indigo
 	color: $color-white
@@ -109,16 +109,18 @@
 	background-color: #000
 
 .openNav
-	position: relative
-	display: block
-	height: $header-height
-	width: $header-height
-	line-height: $header-height
-	color: $color-white
-	font-size: 100%
+	width: 0
+	& > a
+		position: relative
+		display: block
+		height: $header-height
+		width: $header-height
+		line-height: $header-height
+		color: $color-white
+		font-size: 100%
 
-	&::after
-		content: '☰'
+		&::after
+			content: '☰'
 
 .closeNav
 	position: absolute

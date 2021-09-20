@@ -36,8 +36,8 @@ export default class Header extends React.Component {
 	render() {
 		return (<>
 			<header className={`${styles.header} ${this.state.hideHeader ? styles.hide : ''}`}>
-				<div style={{width: 0}}>
-					<a className={styles.openNav} onClick={this.toggle}/>
+				<div className={styles.openNav}>
+					<a onClick={this.toggle}/>
 				</div>
 				<Link href='/'><h1>建中高三日研</h1></Link>
 			</header>
