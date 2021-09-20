@@ -1,11 +1,10 @@
-import head from 'next/head'
+import _Head from 'next/head'
 
 // override the default next head
 export default function Head({title}) {
 	return (
-		<head>
+		<_Head>
 			<title>CKSJP — {title}</title>
-			<link rel='icon' href='/favicon.ico' />
-		</head>
+		</_Head>
 	)
 }
