@@ -5,6 +5,8 @@ export default class MyDocument extends Document {
 		return (
 			<Html>
 				<Head>
+					<meta name='viewport' content='width=device-width'/>
+					<meta charSet='utf-8'/>
 					<link rel='shortcut icon' href='/favicon.ico' />
 				</Head>
 				<body>
