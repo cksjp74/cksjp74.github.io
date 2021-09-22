@@ -47,7 +47,7 @@ export default class Header extends React.Component {
 				<Link href='/'><a onClick={this.toggle}>關於我們</a></Link>
 				<Link href='/lessons'><a onClick={this.toggle}>社團課程</a></Link>
 			</div>
-			<div className={styles.curtain}/>
+			<div className={styles.curtain} onClick={this.toggle}/>
 		</>)
 	}
 }
