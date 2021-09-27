@@ -8,7 +8,7 @@ import styles from '../styles/page/index.module.sass'
 export default function Home() {
 	return (<>
 		<Head title={'首頁'}/>
-		<Layout isHome manifest = {<Manifest/>}>
+		<Layout isHome manifest={<Manifest/>}>
 			<Paragraph id='overall'>
 				<p className={`${font.superTitle}`}>日本の文化を研究する。</p>
 				<p>
