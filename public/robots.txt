@@ -1,0 +1,4 @@
+# malware bad bad, don't hurt me
+
+User-agent: *
+Allow: /
