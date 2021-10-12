@@ -22,6 +22,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
         run: npm ci
+      - name: Generate sitemap
+        run: node ./sitemap.xml.js
       - name: Build project
         run: npm run build
       - name: Export static files
