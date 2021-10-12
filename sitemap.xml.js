@@ -8,7 +8,7 @@ const staticPages = fs.readdirSync('pages')
 			'_error.js',
 			'sitemap.xml.js',
 		].includes(staticPage)
-	}).map(path => `https://cksjp74.github.io/${path}`)
+	}).map(path => `https://cksjp74.github.io/${path.slice(0, -3)}`)
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
